@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/6167d97d7a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Roasters Cafe Project</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#"><img src="/logo/logo.svg" alt="logo" class="logo"></a>
+      <nav class="nav-menu">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="#">Home</a></li>
+          <li class="nav-list-item"><a href="#">Menu</a></li>
+          <li class="nav-list-item"><a href="#">Make a reservation</a></li>
+          <li class="nav-list-item"><a href="#">Our story</a></li>
+          <li class="nav-list-item"><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="video-container">
+      <video src="images-and-videos/hero-video.mp4" controls autoplay loop style="width: 100%;"></video>
+    </div>
+    <div class="general-info-banner">
+      <p>50 Jane St, New York City, NY | Opening times: 7:30 AM-7:00 PM</p>
+    </div>
+  </header>
+  <!--Menu-->
+  <main class="menu">
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="images-and-videos/section-img1.jpg" alt="Woman tears a croisant in front of a table with a cup of coffee on top.">
+        </div>
+        <div class="grid-item">
+          <h2>Feel yourself at home at Roasters Cafe</h2>
+          <h3>Our cozy and chill atmosphere is the ideal space to enjoy the best coffee and pastries.</h3>
+          <p>Located in the vibrant neighborhood of the West Village in lower Manhattan, the exciting food scene can only inspire us to offer the most creative menu we can. Our pasion for good coffee and the world of baked goods is endless, that is why we think you will love our espresso and capuccino, along with our croissant and many other delicacies.</p>
+          <a href=""></a>
+        </div>
+        <div class="grid-item">
+          <img src="images-and-videos/section-img2.jpg" alt="Double sandwich displayed.">
+        </div>
+        <div class="grid-item">
+          <h2>The menu is a highly curated sample of european cuisine</h2>
+          <h3>Our selection of dishes will most certainly surprise you.</h3>
+          <p>We have a wide variety of options ranging from the light mediterranean cuisine to authentic nordic dishes. Our selection of sandwiches from the more traditional panini to our own creations await you.</p>
+          <a href=""></a>
+        </div>
+        <div class="grid-item">
+          <img src="images-and-videos/section-img3.jpg" alt="Blueberry and raspberry pie.">
+        </div>
+        <div class="grid-item">
+          <h2>For all the sweet tooth enthusiasts!</h2>
+          <h3>Enjoy french pâtisserie with our many options.</h3>
+          <p>We dedicate a big part of the menu to our pastries. At Roasters Cafe you can find tartines, pain au chocolat, éclair, macarons, palmiers, mille-feuille and much more.</p>
+          <a href=""></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section class="reservation-section">
+    <div class="form-container">
+      <h2 class="form-title">Make a Reservation</h2>
+      <form target="_blank" method="post">
+        <label for="num-people"></label>
+        <select name="num-people" id="num-people">
+          <option value="2 people">2 people</option>
+          <option value="3 people">3 people</option>
+          <option value="4 people">4 people</option>
+          <option value="5 people">5 people</option>
+          <option value="6 people">6 people</option>
+          <option value="7 people">7 people</option>
+          <option value="8 people">8 people</option>
+          <option value="9 people">9 people</option>
+          <option value="10 people">10 people</option>
+        </select>
+        <label for="date"></label>
+        <select name="date" id="date"></select>
+        <label for="time"></label>
+        <select name="time" id="time">
+          <option value="7:30 AM">7:30 AM</option>
+          <option value="8:00 AM">8:00 AM</option>
+          <option value="8:30 AM">8:30 AM</option>
+          <option value="9:00 AM">9:00 AM</option>
+          <option value="9:30 AM">9:30 AM</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="1:30 PM">1:30 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="3:30 PM">3:30 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="4:30 PM">4:30 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="5:30 PM">5:30 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="6:30 PM">6:30 PM</option>
+        </select>
+        <button type="submit" class="btn-form">Find a table</button>
+      </form>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h2>Get in touch</h2>
+    <p>The easiest way to reach us is by calling. In case you would like to make a reservation, it's best to do it through our website. For other type of inquiries write us an email, we will make sure to get back to you as soon as possible.</p>
+    <div class="contact-opt-container">
+      <div class="contact-opt-item">
+        <i class="fa-solid fa-phone-volume"></i>
+        <h3>Call us at</h3>
+        <p>212-244-8905</p>
+      </div>
+      <div class="contact-opt-item">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email us</h3>
+        <p>info@roasterscafe.com</p>
+      </div>
+    </div>
+    <div class="map-container"></div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <a href="#"><img src="/logo/logo.svg" alt="logo"></a>
+      <div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-yelp"></i>
+      </div>
+      <p>© Roasters Cafe, New York City, NY - 2022.</p>
+    </div>
+  </footer>
+</body>
+</html>
