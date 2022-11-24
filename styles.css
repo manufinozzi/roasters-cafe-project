@@ -1,8 +1,12 @@
 :root {
-  --clr-primary-400: #94FBAB;
-  --clr-primary-300: #B8E1FF;
+  --clr-primary-300: #FFE15D;
+
+  --clr-secondary-300: #FF8018;
+  --clr-secondary-800: #214228;
 
   --clr-neutral-100: #FFF;
+  --clr-neutral-200: #AEAEAE;
+  --clr-neutral-400: #5A5A5A;
   --clr-neutral-900: #011627;
 
   --ff-primary: 'Playfair Display', serif;
@@ -14,16 +18,26 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
-  --fs-300: 1rem;  /* nav-mobile */
-  --fs-400: 1.25rem;  /* nav-desktop */
-  --fs-500: 1.5rem;  /* body-mobile */
-  --fs-600: 1.625rem;  /* body-desktop */
-  --fs-700: 2rem;  /* title-mobile */
-  --fs-800: 2.25rem;  /* title-desktop */
+  --fs-300: 0.875rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.625rem;
+  --fs-700: 1.5rem;
+  --fs-800: 2.25rem;
 
   --fs-desktop-nav: var(--fs-400);
   --fs-desktop-body: var(--fs-600);
   --fs-desktop-title: var(--fs-800);
+}
+
+/* Modifying classes */
+
+.light-shadow {
+  box-shadow: 0 0 3px var(--clr-neutral-200);
+}
+
+.dark-shadow {
+  box-shadow: 0 0 3px var(--clr-neutral-400);
 }
 
 /* Box sizing rules */
@@ -86,4 +100,379 @@ select {
   html:focus-within {
    scroll-behavior: auto;
   }
+}
+
+/* ---General styling--- */
+
+/* Main section and fonts */
+
+body {
+  background-color: var(--clr-primary-300);
+  font-size: var(--fs-500);
+  font-family: var(--ff-body);
+  color: var(--clr-secondary-800);
+}
+
+.general-info-banner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-secondary-800);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-100);
+  padding: 1em;
+  text-align: center;
+}
+
+.menu-item-intro {
+  font-size: var(--fs-300);
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  color: var(--clr-secondary-300);
+  letter-spacing: 0.25em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.menu-item-subtitle {
+  font-size: var(--fs-700);
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.menu-item-p {
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: 2px;
+  box-shadow: inset 0 0 30px white;
+  word-spacing: .4em;
+  padding: .5em;
+}
+
+.form-title {
+  text-align: center;
+  font-size: var(--fs-700);
+  margin-bottom: .5em;
+}
+
+.contact-section-title {
+  text-align: center;
+  font-size: var(--fs-700);
+  margin-bottom: .5em;
+}
+
+.contact-section-p {
+  padding: 0 1em 1em;
+  text-align: justify;
+}
+
+.contact-option-subtitle {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+.contact-option-info {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 50em) {
+  .general-info-banner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 11vh;
+  }
+}
+
+/* Layout */
+
+.header-container {
+  display: flex;
+  background-image: linear-gradient(to bottom, #FFF, #FFE15D);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 560px;
+  margin: .5em auto;
+}
+
+.reservation-section {
+  width: 95%;
+  max-width: 500px;
+  height: 30vh;
+  margin: 3em auto 1em;
+  background-image: url(/images-and-videos/reservation-section-border.png);
+  background-size: 100% 100%;
+  background-color: var(--clr-neutral-100);
+  box-shadow: inset 0 0 50px var(--clr-primary-300);
+  color: var(--clr-secondary-800);
+}
+
+.footer-container {
+  background-color: var(--clr-secondary-800);
+  color: var(--clr-neutral-100);
+  padding: 2em 1em;
+}
+
+@media (min-width: 36em) {
+  .container {
+    width: 85%;
+  }
+  .menu-section {
+    margin-top: 4em;
+  }
+  .reservation-section {
+    width: 85%;
+  }
+}
+
+@media (min-width: 65em) {
+  .container {
+    max-width: 960px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-item:nth-child(4) {
+    grid-column-start: 1;
+    grid-row: 2;
+  }
+  .contact-section {
+    margin: 3em auto;
+  }
+}
+
+/* Navigation */
+
+.heading-logo {
+  width: 60%;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 100;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  right: -100%;
+  top: 0;
+  gap: 0;
+  background-color: var(--clr-secondary-800);
+  width: 70%;
+  max-width: 400px;
+  padding-top: 1.5em;
+  transition: .5s;
+  border-radius: 4px;
+}
+
+.nav-list-item {
+  list-style: none;
+  margin: .5em;
+  padding: .75em;
+}
+
+.nav-list-link {
+  text-decoration: none;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+  padding: .5em;
+  border-left: 1px solid var(--clr-neutral-100);
+  border-bottom: 1px solid var(--clr-neutral-100);
+}
+
+.nav-list-link:focus,
+.nav-list-link:hover {
+  color: var(--clr-secondary-300);
+  transition: .15s;
+}
+
+.nav-menu-active {
+  right: 0;
+}
+
+@media (min-width: 50em) {
+  .heading-logo {
+    margin-left: 1em;
+  }
+  .hamburger {
+    display: none;
+  }
+  .nav-list {
+    all: unset;
+    display: flex;
+    align-items: flex-end;
+    gap: 1em;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+  .nav-list-item {
+    all: unset;
+    text-align: center;
+  }
+  .nav-list-link {
+    all: unset;
+    display: block;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-neutral-900);
+    padding: .25em .5em;
+  }
+}
+
+@media (min-width: 65em) {
+  .nav-list-link {
+    font-size: var(--fs-desktop-nav);
+  }
+}
+
+/* General styles */
+
+.video-container {
+  height: 60vh;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-item-img {
+  margin: 2em auto .5em;
+  border-radius: 4px;
+}
+
+.form-container {
+  width: 80%;
+  margin: auto;
+  padding: 2em 0 .5em;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  justify-content: center;
+}
+
+.hide-label {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.select-dropdown {
+  background-color: var(--clr-secondary-800);
+  color: var(--clr-neutral-100);
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  padding: .5em 1em;
+  text-transform: uppercase;
+}
+
+.calendar {
+  background: var(--clr-secondary-800) url(/images-and-videos/calendar-icon.png);
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: 95%;
+  color: var(--clr-neutral-100);
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  padding: .25em 1em .25em .5em;
+  text-transform: uppercase;
+}
+
+.btn-form {
+  display: block;
+  margin: 1.5em auto 0;
+  background-color: var(--clr-secondary-800);
+  color: var(--clr-neutral-100);
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  padding: .5em 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 500ms;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+  filter: opacity(95%);
+  color: var(--clr-primary-300);
+}
+
+.contact-option-container {
+  margin: 1em auto 0;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-option-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 45em) {
+  .video-container {
+    height: 74vh;
+  }
+  .hero-video {
+    height: 100%;
+  }
+}
+
+/* Footer */
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: .75em;
+}
+
+.socials-container a {
+  color: var(--clr-neutral-100);
+}
+
+.footer-info-p {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  text-align: center;
 }

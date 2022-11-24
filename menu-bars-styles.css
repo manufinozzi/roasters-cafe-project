@@ -42,10 +42,10 @@
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
+  width: 30px;
   height: 4px;
-  background-color: #000;
-  border-radius: 4px;
+  background-color: #214228;
+  border-radius: 10px;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
