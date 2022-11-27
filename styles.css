@@ -141,9 +141,9 @@ body {
 }
 
 .menu-item-p {
-  border: 1px solid var(--clr-neutral-900);
-  border-radius: 2px;
-  box-shadow: inset 0 0 30px white;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 40px white;
   word-spacing: .4em;
   padding: .5em;
 }
@@ -362,7 +362,7 @@ body {
 
 .menu-item-img {
   margin: 2em auto .5em;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .form-container {
