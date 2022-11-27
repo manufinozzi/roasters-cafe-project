@@ -205,7 +205,6 @@ body {
 .reservation-section {
   width: 95%;
   max-width: 500px;
-  height: 30vh;
   margin: 3em auto 1em;
   background-image: url(/images-and-videos/reservation-section-border.png);
   background-size: 100% 100%;
@@ -254,6 +253,9 @@ body {
   .contact-section {
     margin: 3em auto;
   }
+  .reservation-section {
+    padding: 2em 0;
+  }
 }
 
 /* Navigation */
@@ -301,7 +303,6 @@ body {
   border-bottom: 1px solid var(--clr-neutral-100);
 }
 
-.nav-list-link:focus,
 .nav-list-link:hover {
   color: var(--clr-secondary-300);
   transition: .15s;
@@ -368,7 +369,7 @@ body {
 .form-container {
   width: 80%;
   margin: auto;
-  padding: 2em 0 .5em;
+  padding: 1em 0;
 }
 
 .input-container {
@@ -415,6 +416,11 @@ body {
   text-transform: uppercase;
 }
 
+.calendar::-webkit-inner-spin-button,
+.calendar::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .btn-form {
   display: block;
   margin: 1.5em auto 0;
@@ -430,8 +436,7 @@ body {
   transition: 500ms;
 }
 
-.btn-form:hover,
-.btn-form:focus {
+.btn-form:hover {
   filter: opacity(95%);
   color: var(--clr-primary-300);
 }
